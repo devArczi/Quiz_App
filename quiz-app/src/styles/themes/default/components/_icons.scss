@@ -1,0 +1,18 @@
+.category{
+    &__icon{
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    h3,img{
+        color: white;
+        background: linear-gradient(22deg, rgb(60, 1, 133) 17%, rgba(132,76,208,0.1) 100%);
+    }
+    }
+
+}

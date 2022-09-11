@@ -1,0 +1,74 @@
+/* = Colors
+********************************************************** */
+$c-black: #000;
+$c-white: #fff;
+$c-cloudy: #a7a6a5;
+$c-Alto:#D3D3D3;
+$c-blue: #0000ff;
+$c-Calico: #DEB887;
+$c-Pink: #FFB6C1;
+$c-Alabaster-opacity:rgba(255, 255, 255, 0.6);
+
+
+/* = fonts
+********************************************************** */
+
+$f-fontAwesome: 'Font Awesome 5 Free';
+$f-fontAwesomeBrands: 'Font Awesome 5 Brands';
+$f-baseFontFamily: 'Roboto', sans-serif;
+
+/* = breaks
+********************************************************** */
+
+$break-xs:480px;
+$break-mobile: 767px;
+$break-mid: 991px;
+$break-laptop: 1299px;
+$break-high: 1600px;
+
+/* = minimum device sizes
+********************************************************** */
+
+$tablet-min: 768px;
+$desktop-min: 1200px;
+
+/* = Grid
+********************************************************** */
+
+$wrapper: 1302px;
+$wrapper-high: 1200px;
+$wrapper-laptop:990px;
+$wrapper-mid:800px;
+$wrapper-mobile:480px;
+$columns: 12;
+$padding: 15px;
+$grid-md: 768px;
+$grid-lg: 992px;
+$grid-xl: 1199px;
+
+/* = Paddings, Margins
+********************************************************** */
+$space-xx-small: 5px;
+$space-x-small: 10px;
+$space-small: 15px;
+$space-standard: 20px;
+$space-x-medium: 25px;
+$space-medium: 30px;
+$space-large: 40px;
+$space-x-large: 50px;
+$space-xx-large: 60px;
+$space-xxx-large: 70px;
+$space-xxxx-large: 80px;
+$space-huge: 100px;
+
+/* = Buttons
+********************************************************** */
+
+$button-small: 175px;
+$button-medium: 294px;
+$button-large: 375px;
+
+/* = Lists
+********************************************************** */
+
+$sizes:8.3333333%,16.666666667%,25%,33.33333333333%,41.66666667%,50%,58.3333333%,66.666666667%,75%,83.33333333333%,91.66666667%,100%;
