@@ -10,9 +10,10 @@ import programowanie_ikona from "../../assets/programowanie_ikona.svg"
 
 const Homepage = () => {
     const Link = '/Category';
-    const button_class = ['container__button--tech','container__button--kult','container__button--moto', 'container__button--prog', 'container__button--his',]
+    const button_class = ['container__button--tech container__category--tech','container__button--kult','container__button--moto', 'container__button--prog', 'container__button--his',]
     const imgs = [technologia_ikona, kultura_ikona, motoryzacja_ikona, programowanie_ikona, historia_ikona]
     const headerTxt = ['Technologia', 'Kultura', 'Motoryzacja', 'Programowanie', 'Historia', ]
+
     return (
         <div className="app__wrapper">
             <Header/>

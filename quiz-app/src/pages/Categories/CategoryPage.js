@@ -8,9 +8,9 @@ const CategoryPage = () =>{
     const CatImg = localStorage.getItem("category_img")
     const Cat = localStorage.getItem("category")
     console.log(CatImg)
-
+    // const SelectedCategory = `container__category--${Cat}`
     return(
-        <div className="app__wrapper">
+        <div className={`app__wrapper container__category--${Cat}`} >
             <Header/>
             <Icon img={CatImg} header={Cat}/>
             <Link to="/Question">

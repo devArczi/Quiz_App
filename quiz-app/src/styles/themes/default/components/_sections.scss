@@ -57,3 +57,17 @@
         }
     }
 }
+.container{
+    &__category{
+        &--Technologia{
+            background-image: url(../../../../assets/tech_background.png);
+        }
+        &--Historia{
+            background-image: url(../../../../assets/history_background.png);
+            background-origin: border-box;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
