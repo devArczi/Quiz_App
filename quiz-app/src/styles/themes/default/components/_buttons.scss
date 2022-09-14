@@ -1,29 +1,42 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 %CatButton-placeholder{
     width: 175px;
     height: 175px;
     position: relative;
     background-image: url(../../../../assets/cat_button_quiz.png);
-    // background: linear-gradient(22deg, rgb(60, 1, 133) 77%, rgba(132,76,208,1) 100%);
+    //background: linear-gradient(22deg, rgb(60, 1, 133) 77%, rgba(132,76,208,1) 100%);
     z-index: 1;
-    border-radius: 10%;
+    border-radius: 20px;
     cursor: pointer;
-        &::before{
-
+    background-size: cover;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    &::before
+{
             position: absolute;
-            border-radius: 10%;
+            border-radius: 20px;
             content: "";
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
             background-image: url(../../../../assets/cat_button--hover_quiz.png);
-            background-size: cover; 
-            // background: rgb(241,0,181);
-            // background: linear-gradient(90deg, rgba(241,0,181,1) 0%, rgba(126,90,194,1) 100%);
+            background-size: cover;
+            //background: rgb(241,0,181);
+            //background: linear-gradient(90deg, rgba(241,0,181,1) 0%, rgba(126,90,194,1) 100%);
             z-index: -1;
             transition: opacity 0.5s linear;
             opacity: 0;
-        }
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+}
         &:hover::before{
             opacity: 1;
         }
@@ -35,10 +48,19 @@
             left: 10px;
         }   
         h3{
-            border-top: 1px solid red;
+            
             position: absolute;
             color: white;
-            top: 100px;
+            top: 120px;
+        }
+        br{
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 140px;
+            background-color: red;
+            top: 120px;
+            left: 10px;
         }
 }
 .navigation{
@@ -68,7 +90,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            align-items: stretch;
+            align-items: center;
             align-content: center;
             flex-direction: row;
             width: 350px;
@@ -115,7 +137,14 @@
         &--start{
             button{
             background-image: url(../../../../assets/button--start_quiz.png);
-            background-size: cover; 
+            border-radius: 15px;
+            &::before{
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+}
             }
             
         }
