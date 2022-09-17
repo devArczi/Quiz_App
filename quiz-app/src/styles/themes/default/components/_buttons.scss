@@ -1,12 +1,8 @@
-*{
-    margin: 0 auto;
-    box-sizing: border-box;
-}
 %CatButton-placeholder{
     width: 175px;
     height: 175px;
     position: relative;
-    background-image: url(../../../../assets/cat_button_quiz.png);
+    background: url(../../../../assets/cat_button_quiz.png);
     //background: linear-gradient(22deg, rgb(60, 1, 133) 77%, rgba(132,76,208,1) 100%);
     z-index: 1;
     border-radius: 20px;
@@ -25,7 +21,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-image: url(../../../../assets/cat_button--hover_quiz.png);
+            background: url(../../../../assets/cat_button--hover_quiz.png);
             background-size: cover;
             //background: rgb(241,0,181);
             //background: linear-gradient(90deg, rgba(241,0,181,1) 0%, rgba(126,90,194,1) 100%);
@@ -136,7 +132,7 @@
         }
         &--start{
             button{
-            background-image: url(../../../../assets/button--start_quiz.png);
+            background: url(../../../../assets/button--start_quiz.png);
             border-radius: 15px;
             &::before{
                 border-radius: 15px;
@@ -157,9 +153,12 @@
     &__button{
         &--answer{
             @extend %CatButton-placeholder;
-            height: 65px;
-            span{
-                color:white
+            min-height: 100%;
+            display: block;
+            padding: 15px;
+            p{
+                color:white;
+                padding: 20px;
             }       
         }
         &--answer.click{
@@ -173,6 +172,29 @@
         }
         &--finished{
             @extend %CatButton-placeholder;
+        }
+        &--check, &--next{
+            @extend %CatButton-placeholder;
+            width: 125px;
+            height: 75px;
+            align-items: center;
+            margin-right: 15%;
+                p{
+                color:white;
+                padding: 20px; 
+                }
+        }
+        &--finish{
+            @extend %CatButton-placeholder;
+            margin: 0 0 0 12%;
+            width: 125px;
+            height: 75px;
+            display: flex; 
+            align-items: center;
+            p{
+                color:white;
+                padding: 20px;                 
+            }
         }
     }
     &__button:hover{

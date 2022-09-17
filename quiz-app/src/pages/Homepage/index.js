@@ -9,10 +9,6 @@ import programowanie_ikona from "../../assets/programowanie_ikona.svg"
 
 
 const Homepage = () => {
-    // const Link = '/Category';
-    // const button_class = ['container__button--tech container__category--tech','container__button--kult','container__button--moto', 'container__button--prog', 'container__button--his',]
-    // const imgs = [technologia_ikona, kultura_ikona, motoryzacja_ikona, programowanie_ikona, historia_ikona]
-    // const headerTxt = ['Technologia', 'Kultura', 'Motoryzacja', 'Programowanie', 'Historia', ]
 
     const CategoryButtonsList = [
         {id: 0, Link: "/Category" , button:"container__button--tech" , img: technologia_ikona , header: "Technologia"},
@@ -35,16 +31,6 @@ const Homepage = () => {
                 <h2>WYBIERZ KATEGORIĘ</h2>
                 <div className="categories__wrapper">
                     {CategoryButtonsListItem}
-                     {/* <div>
-                        <Category_Button Link={Link} button={button_class[0]} img={imgs[0]} header={headerTxt[0]}/>
-                        <Category_Button Link={Link} button={button_class[1]} img={imgs[1]} header={headerTxt[1]}/>
-                        <Category_Button Link={Link} button={button_class[2]} img={imgs[2]} header={headerTxt[2]}/>
-                    </div>
-                    <div>
-                        <Category_Button Link={Link} button={button_class[3]} img={imgs[3]} header={headerTxt[3]}/>
-                        <Category_Button Link={Link} button={button_class[4]} img={imgs[4]} header={headerTxt[4]}/>
-
-                    </div> */}
                     
                 </div>
             </div>

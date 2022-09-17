@@ -76,41 +76,46 @@ const SimpleQ = (props) => {
         setButtonResult2("unclick")
         setButtonResult3("unclick")
     }
-
+    const nextQuestion = () =>{
+        if(count < 10){
+            setCount(count+1)
+        }
+        
+    }
     const finish = ()=>{
         if(count === 9){
             setFinish1("quiz__button--finished")
         }
     }
     localStorage.setItem('points', points)
-    
+    console.log(props.data[category][count].QuestionNumber)
 
     return(
         
-        <div>
+        <div className='quiz__main-wrapper'>
+            <div className='quiz__main--questionNum'><p>{points}/10</p></div>
             <div className='quiz__header'>{props.data[category][count].Question}</div>
             <div className="quiz__wrapper">
                 <div className='quiz__wrapper--wrapper'>
                     <div>
-                        <button className={`quiz__button--answer ${buttonResult} ${correct}`} onClick={()=>Mark()}><span>{props.data[category][count].Choice1}</span></button>
+                        <button className={`quiz__button--answer ${buttonResult} ${correct}`} onClick={()=>Mark()}><p>{props.data[category][count].Choice1}</p></button>
                     </div>
                     <div className={`quiz__check ${correct}`}></div>
                 </div>
                 <div>
-                    <button className={`quiz__button--answer ${buttonResult1} ${correct}`} onClick={()=>Mark1()}><span>{props.data[category][count].Choice2}</span></button>
+                    <button className={`quiz__button--answer ${buttonResult1} ${correct}`} onClick={()=>Mark1()}><p>{props.data[category][count].Choice2}</p></button>
                 </div>
                 <div>
-                    <button className={`quiz__button--answer ${buttonResult2} ${correct}`} onClick={()=>Mark2()}><span>{props.data[category][count].Choice3}</span></button>
+                    <button className={`quiz__button--answer ${buttonResult2} ${correct}`} onClick={()=>Mark2()}><p>{props.data[category][count].Choice3}</p></button>
                 </div>
                 <div>
-                    <button className={`quiz__button--answer ${buttonResult3} ${correct}`} onClick={()=>Mark3()}><span>{props.data[category][count].Choice4}</span></button>
+                    <button className={`quiz__button--answer ${buttonResult3} ${correct}`} onClick={()=>Mark3()}><p>{props.data[category][count].Choice4}</p></button>
                 </div>
             </div>
-            <button onClick={()=>checkAnswer()}>Sprawdź Odpowiedź</button>
-            <button onClick={()=>{setCount(count+1); reset()}} >Zmień Pytanie</button>
-            <div>{points}/10</div>
+            <button className={`quiz__button--check`} onClick={()=>checkAnswer()}><p>Sprawdź Odpowiedź</p></button>
+            <button className={`quiz__button--next`}onClick={()=>{reset(); nextQuestion()}}><p>Następne Pytanie</p></button>
             <Link to='/Result'>
-                <button onClick={()=>finish()} className={` ${finish1}`}>Zakończ</button>
+                <button className={`quiz__button--finish ${finish1}`} onClick={()=>finish()}><p>Zakończ</p></button>
             </Link>
 
         </div>
