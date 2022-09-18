@@ -12,8 +12,9 @@ const SimpleQ = (props) => {
     const [choice, setChoice] = useState();
     const [correct, setCorrect] = useState("")
     const [count, setCount] = useState(0)
-    const [points, setPoints] = useState(0);
+    const [points, setPoints] = useState(1);
     const [finish1, setFinish1] = useState("quiz__button--finish");
+    const [buttonStatus, setButtonStatus] = useState(false);
 
     const category = localStorage.getItem("category")
 
@@ -80,6 +81,10 @@ const SimpleQ = (props) => {
         if(count < 10){
             setCount(count+1)
         }
+        if(count === 8){
+            setButtonStatus(true)
+        }
+        setPoints(points + 1 )
         
     }
     const finish = ()=>{
@@ -88,13 +93,13 @@ const SimpleQ = (props) => {
         }
     }
     localStorage.setItem('points', points)
-    console.log(props.data[category][count].QuestionNumber)
-
+    console.log(props.data[category][9].QuestionNumber)
+    const questionNumberXD = props.data[category][count].QuestionNumber;
     return(
         
         <div className='quiz__main-wrapper'>
-            <div className='quiz__main--questionNum'><p>{points}/10</p></div>
-            <div className='quiz__header'>{props.data[category][count].Question}</div>
+            
+            <div className='quiz__header'>{props.data[category][count].Question}<div className='quiz__main--questionNum'><p>{points}/10</p></div></div>
             <div className="quiz__wrapper">
                 <div className='quiz__wrapper--wrapper'>
                     <div>
@@ -113,7 +118,7 @@ const SimpleQ = (props) => {
                 </div>
             </div>
             <button className={`quiz__button--check`} onClick={()=>checkAnswer()}><p>Sprawdź Odpowiedź</p></button>
-            <button className={`quiz__button--next`}onClick={()=>{reset(); nextQuestion()}}><p>Następne Pytanie</p></button>
+            <button className={`quiz__button--next`}onClick={()=>{reset(); nextQuestion()}} disabled={buttonStatus}><p>Następne Pytanie</p></button>
             <Link to='/Result'>
                 <button className={`quiz__button--finish ${finish1}`} onClick={()=>finish()}><p>Zakończ</p></button>
             </Link>
