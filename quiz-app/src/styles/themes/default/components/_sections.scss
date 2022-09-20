@@ -74,6 +74,56 @@
         box-shadow: 1px  0 1px lightblue;
         margin-left: 10px;
     }
+    &__resultWrapper{
+        border: yellow 2px solid;
+        width: 90%;
+        height: 1000px;
+        display: flex;
+        padding: 0 50px;
+        &--wrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            &-Content{
+                margin-left: 130px;
+                display: flex;
+                align-items: center;
+                padding-right: -100px;
+                height: 65px;
+                margin-right: 220px;
+                background: url(../../../../assets/result_pointsBG.png);
+                p:first-child{
+                    padding: 0 50px;
+                    margin-left: 313px;
+                    color: white;
+                }
+            }
+        }
+        &--result{
+            position: relative;
+            border: red 2px solid;
+            flex-basis: 80%;
+        }
+        &--nav{
+            border: lightgreen 2px solid;
+            flex-basis: 20%;
+        }
+        &--resultPoints{
+            position: unset;
+            display: flex;
+            width: 96px;
+            height: 90px;
+            background-size: cover;
+
+            p{
+                position: unset;
+                color: white;
+                font-size: 1.5rem;
+                padding-right: 5px;
+                line-height: 80px;
+            }
+        }
 }
 .categories{
     &__wrapper{
@@ -99,11 +149,12 @@
             background: url(../../../../assets/tech_background.png);
         }
         &--Historia{
-            background: url(../../../../assets/history_background.png);
+            // background: url(../../../../assets/history_background.png);
             background-origin: border-box;
             background-size: auto;
             background-repeat: no-repeat;
             background-position: center;
         }
     }
+}
 }

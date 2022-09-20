@@ -10,3 +10,7 @@ h2{
     box-sizing: border-box;
     margin: 0 auto;
 }
+
+button:disabled{
+    cursor: not-allowed;
+}

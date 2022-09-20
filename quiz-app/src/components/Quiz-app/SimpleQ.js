@@ -15,6 +15,7 @@ const SimpleQ = (props) => {
     const [points, setPoints] = useState(1);
     const [finish1, setFinish1] = useState("quiz__button--finish");
     const [buttonStatus, setButtonStatus] = useState(false);
+    const [checkButtonStatus, setCheckButtonStatus] = useState(false);
 
     const category = localStorage.getItem("category")
 
@@ -62,12 +63,13 @@ const SimpleQ = (props) => {
         if(props.data[category][count].Answer === choice ){
             setCorrect("correct")
             setButtonResult("unclick")
-            setPoints(points + 1 )
+            setCheckButtonStatus(true)
+            // setPoints(points + 1 )
             
         }
         else{
             setCorrect("incorrect")
-            setPoints(points)
+            // setPoints(points)
         }
     }
     const reset = ()=>{
@@ -84,6 +86,7 @@ const SimpleQ = (props) => {
         if(count === 8){
             setButtonStatus(true)
         }
+        setCheckButtonStatus(false)
         setPoints(points + 1 )
         
     }
@@ -117,7 +120,7 @@ const SimpleQ = (props) => {
                     <button className={`quiz__button--answer ${buttonResult3} ${correct}`} onClick={()=>Mark3()}><p>{props.data[category][count].Choice4}</p></button>
                 </div>
             </div>
-            <button className={`quiz__button--check`} onClick={()=>checkAnswer()}><p>Sprawdź Odpowiedź</p></button>
+            <button className={`quiz__button--check`} onClick={()=>checkAnswer()} disabled={checkButtonStatus}><p>Sprawdź Odpowiedź</p></button>
             <button className={`quiz__button--next`}onClick={()=>{reset(); nextQuestion()}} disabled={buttonStatus}><p>Następne Pytanie</p></button>
             <Link to='/Result'>
                 <button className={`quiz__button--finish ${finish1}`} onClick={()=>finish()}><p>Zakończ</p></button>
