@@ -7,13 +7,13 @@ const Category_Button = (props) =>{
 
     return(
         <div>
-            <Link to='/Category'>
             <button onClick={()=>{localStorage.setItem("category", props.header);localStorage.setItem("category_img", props.img)}} className={props.button}>
-                <img src={props.img} alt="img"/>
-                <br/>
-                <h3>{props.header}</h3>
+                <Link to='/Category'>
+                    <img src={props.img} alt="img"/>
+                    <br/>
+                    <h3>{props.header}</h3>
+                </Link>
             </button>
-            </Link>
         </div>
     )
 }

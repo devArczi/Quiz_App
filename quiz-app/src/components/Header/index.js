@@ -11,7 +11,7 @@ const Header = () => {
                 <img src={cofnij_x} alt="img"></img>
             </button>  
             <h1>QUIZ</h1>         
-            <button className='navigation__button-2'>
+            <button className='navigation__button-2' onClick={()=>navigate("/")}>
                 <img src={zamknij_x} alt="img"></img>
             </button>
         </div>

@@ -13,7 +13,7 @@ const CategoryPage = () =>{
             <Header/>
             <Icon img={CatImg} header={Cat}/>
             <Link to="/Question">
-                <StartButton/>
+                <StartButton content={"Rozpocznij"}/>
             </Link>
             
         </div>

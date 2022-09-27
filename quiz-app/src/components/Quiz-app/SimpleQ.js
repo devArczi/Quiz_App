@@ -97,7 +97,6 @@ const SimpleQ = (props) => {
     }
     localStorage.setItem('points', points)
     console.log(props.data[category][9].QuestionNumber)
-    const questionNumberXD = props.data[category][count].QuestionNumber;
     return(
         
         <div className='quiz__main-wrapper'>
